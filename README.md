@@ -2,7 +2,7 @@
 
 **Native query operators on variable history.**
 
-In most languages, a variable is just “what it is right now.” You assign, the old value is gone. Want “what was `x` two hours ago?” or “when did `x` hit its max?” — you bolt on logging, event stores, audit tables, or time-series DBs. Time gets pushed outside the language.
+In most languages, a variable is just “what it is right now.” You assign, the old value is gone. Want “what was `x` two hours ago?” or “when did `x` hit its max?” you bolt on logging, event stores, audit tables, or time series DBs. Time gets pushed outside the language.
 
 temprud is a different take: the variable keeps its own history and exposes it through **query operators**. Time becomes a first-class dimension of program state.
 
@@ -30,7 +30,7 @@ You still do `price.set(value)`. But now you can ask:
 | Direction? | `price.trend()` → `"increasing"` / `"decreasing"` / `"stable"` |
 | Previous value? | `price.rollback(1)` |
 
-No separate logging layer — the variable *is* the history.
+No separate logging layer, the variable *is* the history.
 
 ---
 
@@ -92,7 +92,7 @@ Lots of domains are about *how things change over time*:
 - **IoT** — sensor streams, device metrics  
 - **Debugging** — “when did this variable go wrong?”
 
-Usually we externalize that into logs, event sourcing, or time-series DBs. temprud explores keeping history inside the variable and querying it with a small set of operators. Same idea as “temporal variables” or “time-aware state” — here it’s just one package and a direct API.
+Usually we externalize that into logs, event sourcing, or time-series DBs. temprud explores keeping history inside the variable and querying it with a small set of operators. Same idea as “temporal variables” or “time-aware state” here it’s just one package and a direct API.
 
 **Principle:** time is a queryable dimension of state. The variable isn’t only “current value”; it’s “current value + history you can query.”
 
