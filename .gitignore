@@ -1,0 +1,31 @@
+# Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual envs
+venv/
+.venv/
+env/
+.env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project: demo persistence files (created when running examples/demo.py)
+demo_history.json
+full_demo.json
+
+# Build / dist
+build/
+dist/
+*.egg-info/
+*.egg

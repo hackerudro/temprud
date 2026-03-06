@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "temprud"
+version = "0.1.0"
+description = "Variables with queryable history — native operators for time as a dimension of state"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "hackerudro" }]
+keywords = ["temporal", "history", "time-series", "variable", "query", "anomaly"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "scikit-learn>=1.0.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.urls]
+Repository = "https://github.com/hackerudro/temprud"
+Homepage = "https://github.com/hackerudro/temprud"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["temprud*"]
